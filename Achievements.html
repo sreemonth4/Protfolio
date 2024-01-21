@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Achievements</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #000000; /* Background color */
+            color: #ecf0f1; /* Text color */
+        }
+
+        h1 {
+            text-align: center;
+            color: #000000; /* Heading color */
+            font-weight: 700;
+            font-style: italic;
+            margin-top: 100px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease, text-shadow 0.5s ease-in-out;
+            /* Added text-shadow transition */
+        }
+
+        h1.animate {
+            opacity: 1;
+            transform: translateY(0);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7); /* Glowing effect */
+        }
+
+        .achievement-box {
+            background: #34495e; /* Achievement box background color */
+            border: 5px solid #d79926; /* Border color */
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-style: groove;
+            color: #ecf0f1; /* Achievement text color */
+        }
+
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db; /* Button background color */
+            color: #ecf0f1; /* Button text color */
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="animate">My Achievements</h1>
+
+    <!-- Achievement 1 -->
+    <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_ive-secured-an-offer-letter-for-a-web-developer-activity-7151087824350367744-rfnu?utm_source=share&utm_medium=member_desktop">
+        <div class="achievement-box">
+            <h3 style="color: #e74c3c;">Offer Letter for the Web Developer Intern position at Bharat Intern.</h3>
+            <p>Excited to share a significant milestone in my journey as I've successfully secured an offer letter for the Web Developer Intern position at Bharat Intern. Thrilled to contribute my skills and learn in this dynamic environment!</p>
+            <button onclick="toggleAchievement('achievement1')">View Achievement</button>
+        </div>
+    </a>
+    
+    <!-- Achievement 2 -->
+    
+
+    <!-- Add more achievements as needed -->
+
+    <script>
+        function toggleAchievement(achievementId) {
+            var achievementBox = document.getElementById(achievementId);
+            achievementBox.style.display = (achievementBox.style.display === "none") ? "block" : "none";
+        }
+    </script>
+
+</body>
+</html>
