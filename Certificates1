@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Certifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #4da2a3 url('background-pattern.png') repeat; /* Using a background pattern */
+            color: #fff;
+        }
+
+       /* ... (existing styles) ... */
+
+h2 {
+    color: #eaed05;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic ;
+    margin-top: 100px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease, text-shadow 0.5s ease-in-out; /* Added text-shadow transition */
+}
+
+h2.animate {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7); /* Glowing effect */
+}
+
+/* ... (existing styles) ... */
+
+        
+
+
+        .certification {
+            margin-bottom: 20px;      
+            padding: 20px;
+            border: 6px solid #eb951d;
+            border-radius: 10px;
+            border-style:ridge;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            background-color: rgb(220, 214, 223); /* Slightly transparent white background */
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .certification h3 {
+            margin-bottom: 10px;
+        }
+
+        .certification p {
+            margin-bottom: 15px;
+        }
+
+        .image-link-button {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .image-link-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #597c7e;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px; /* Rounded corners */
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 0 10px rgba(0, 238, 255, 0.5); /* Glow effect */
+        }
+
+        .image-link-button a:hover {
+            background-color: #005073; /* Darker color on hover */
+            transform: scale(1.05); /* Slight scale-up effect */
+            box-shadow: 0 0 20px rgba(0, 238, 255, 0.8); /* Increased glow on hover */
+        }
+
+        @media only screen and (max-width: 600px) {
+            .certification {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 class="animate">My Certifications</h2>
+
+    <div class="certification">
+        <h3>Problem-Solving Basic</h3>
+        <p>The HackerRank Problem Solving Basics certification offers a meticulously curated curriculum covering fundamental concepts like data types, control structures, and recursion.<br> Through immersive hands-on coding challenges, participants refine their algorithmic thinking and problem-solving skills, receiving immediate feedback for continuous improvement. This globally recognized certification signifies commitment to excellence in programming, providing a competitive edge in the ever-evolving tech landscape..</p>
+        <div class="image-link-button">
+            <a href="https://media.licdn.com/dms/image/C5622AQFHAdOib1qDZQ/feedshare-shrink_800/0/1677435267595?e=1708560000&v=beta&t=d3RTqARCg6d8Unt5Gcb3FTJ29i-Wp82fPPikH03f_Ek" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3>Edgroom participation certification</h3>
+        <p>"Proud to have participated in the @lendiblog contest on Edgroom, enhancing my blog writing skills. Certified for excellence in content creation and effective storytelling. hashtag#BloggingExcellence hashtag#EdgroomContest" hashtag#lendiblogcontest.</p>
+        <div class="image-link-button">
+            <a href="https://media.licdn.com/dms/image/D5622AQHAxwjpmYxzlw/feedshare-shrink_800/0/1699182678067?e=1708560000&v=beta&t=G_6DlXUa-ifAvWeshrW96z1FxCb9FQr-WUJc7_iQLfk" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3>Virtual Internship in Cyber Security with PaloAlto Networks and Eduskills</h3>
+        <p>🛠️ During this internship from Dec 2022 to Feb 2023, I'll be diving into the dynamic world of cybersecurity, gaining hands-on experience, and working with cutting-edge technologies. Grateful for the opportunity to contribute to the field and learn from industry leaders.
+
+            🚀 Ready to embark on this journey of continuous learning and growth! Special thanks to AICTE, PaloAlto Networks, and Eduskills for making this possible..</p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_aicte-cyber-security-virtual-internship-activity-7132739964454268929-odVz?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3>Virtual Internship in Artificial Intelligence and Machine Learning with AWS Academy and Eduskills</h3>
+        <p>📆 Course Duration: May 2023 - July 2023
+
+            During this immersive experience, I'll be diving deep into cutting-edge AI and ML technologies, learning from industry leaders, and gaining hands-on experience with the latest tools and frameworks. 🤖💻
+            
+            Grateful for this incredible opportunity to advance my skills and contribute to the forefront of technology. Looking forward to a summer of growth, collaboration, and innovation! 🌟🔍</p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_aicte-ai-ml-virtual-internship-by-aws-activity-7132740915856625664-Wzlt?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3> Android-Developers virtual internship with Google Developers and Eduskills</h3>
+        <p>I had completed the Android-Developers virtual internship, a program sponsored by Google for Developers and Eduskills. Throughout the period from Sep 2023 to Nov 2023, they engaged in cutting-edge projects, gaining valuable skills and insights in the tech industry. Grateful for the mentorship received, they are now poised to apply these skills to address real-world challenges with confidence.</p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_android-developer-virtual-internship-by-google-activity-7132742407619559426-OBD7?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+    
+    <div class="certification">
+        <h3>Accenture UK's Developer and Technology Simulation!</h3>
+        <p>🚀 I just completed Accenture UK's Developer and Technology Simulation! Mastered the Software Development Lifecycle, researched emerging DevOps trends, presented on Waterfall vs. Agile, designed a custom algorithm, and debugged Python code..</p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_accenture-uks-developer-and-technology-activity-7141445776538255360-6QRD?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3>Cyber Security Internship at Indian Servers</h3>
+        <p>I am thrilled to embark on my Cyber Security Internship at Indian Servers from December 2022 to February 2023! 🚀 Specializing in web application testing, I excel at comprehensive web security auditing and conducting thorough vulnerability assessments on web applications. Eager to contribute to safeguarding digital landscapes, my skills encompass identifying and addressing potential threats and ensuring robust protection for online assets. Thriving in the dynamic realm of cybersecurity, I am committed to staying ahead of evolving risks and contributing to the resilience of digital infrastructures. Let's connect and strengthen the defense against cyber threats!</p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_cyber-security-intern-activity-7147811769757876225-nfpK?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3> Adobe Certified Associate—Photoshop" course by Mike Rankin</h3>
+        <p>I am proud to announce my completion of the "Cert Prep: Adobe Certified Associate—Photoshop" course by Mike Rankin, supported by Adobe and LinkedIn Learning! 🎓🖌️ Elevating my skills in Adobe Photoshop, this certification journey was enriching and insightful. I am grateful for the comprehensive guidance from industry expert Mike Rankin. I am ready to apply my refined skills to create visually stunning designs.
+        </p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_adobe-photoshop-certification-activity-7147813690346549248-xxQ6?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+    <div class="certification">
+        <h3>Job Simulation || JPMorgan Chase & Co.'s Excel Skills on [Forage]
+        </h3>
+        <p>
+            * Acquired proficient command of Excel functionalities and data analysis
+            techniques, including data cleansing and manipulation, and conditional
+            formatting techniques.
+            * Acquired proficiency in automation by learning to record macros and script in
+            Visual Basic for Applications (VBA), developing two functional macros
+           integrated with buttons using account sales data.
+            * Gained expertise in data visualization and storytelling using Excel and
+           PowerPoint by creating impactful charts and interactive dashboards.
+
+           <h3>Skills Obtained:</h3>
+
+           <p> CONDITIONAL FORMATTING, DASHBOARDSDATA EXPLORATION, DATA VISUALIZATION, DATA-DRIVEN STORYTELLING, EXCEL SHORTCUTS,
+             MICROSOFT EXCEL, VBA MACROS, WRITTEN COMMUNICATION</p>
+           
+        </p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_excel-skills-job-simulation-activity-7147954087299276800-pffk?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+    <div class="certification">
+        <h3> "Introduction to Cyber Security" course by Cisco</h3>
+        <p>🔒 Elevating My Career in Cybersecurity! 🚀
+
+            Thrilled to announce the completion of the "Introduction to Cyber Security" course by Cisco at the prestigious Lendi Institute of Engineering and Technology! 🎓 This journey has been a pivotal step in honing my skills and preparing for the dynamic field of cybersecurity.
+            
+            🌐 As organizations increasingly prioritize digital security, I'm proud to have undergone comprehensive training that seamlessly blends theory and hands-on experience. A special thanks to Lendi Institute for providing a platform that fosters excellence. 👩‍💻
+            
+            Heartfelt gratitude to @Cisco for delivering a course that not only deepened my understanding but also included immersive job simulations, preparing me for real-world challenges. 🙌
+            
+            Excited to leverage this knowledge in the job market and contribute to the ever-evolving landscape of cybersecurity. 💼
+        </p>
+        <div class="image-link-button">
+            <a href="https://www.linkedin.com/posts/isukapalli-srimanth-raj-b9297824a_elevating-my-career-in-cybersecurity-activity-7149635743399690240-Bbz_?utm_source=share&utm_medium=member_desktop" target="_blank">View Certificate Image</a>
+        </div>
+    </div>
+
+
+    <!-- Add more certification divs as needed -->
+
+    <script>
+        // JavaScript to add the 'animate' class to h2 on scroll
+        window.addEventListener('scroll', function () {
+            var h2 = document.querySelector('h2');
+            var position = h2.getBoundingClientRect().top;
+
+            if (position < window.innerHeight - 50) {
+                h2.classList.add('animate');
+            }
+        });
+    </script>
+
+</body>
+</html>
