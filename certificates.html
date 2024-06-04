@@ -17,7 +17,7 @@
             color: #eaed05;
             text-align: center;
             font-weight: 700;
-            font-style: italic ;
+            font-style: italic;
             margin-top: 100px;
             opacity: 0;
             transform: translateY(20px);
@@ -31,7 +31,7 @@
         }
 
         .certification {
-            margin-bottom: 20px;      
+            margin-bottom: 20px;
             padding: 20px;
             border: 6px solid #eb951d;
             border-radius: 10px;
@@ -87,7 +87,7 @@
                 width: 100%;
             }
         }
-        
+
         .form-container {
             background-color: #ffffff;
             padding: 20px;
@@ -124,16 +124,7 @@
     <h2 class="animate">My Certifications</h2>
 
     <div id="certifications-list">
-        <div class="certification">
-            <h3>Problem-Solving Basic</h3>
-            <p>The HackerRank Problem Solving Basics certification offers a meticulously curated curriculum covering fundamental concepts like data types, control structures, and recursion.<br> Through immersive hands-on coding challenges, participants refine their algorithmic thinking and problem-solving skills, receiving immediate feedback for continuous improvement. This globally recognized certification signifies commitment to excellence in programming, providing a competitive edge in the ever-evolving tech landscape..</p>
-            <div class="image-link-button">
-                <a href="https://media.licdn.com/dms/image/C5622AQFHAdOib1qDZQ/feedshare-shrink_800/0/1677435267595?e=1708560000&v=beta&t=d3RTqARCg6d8Unt5Gcb3FTJ29i-Wp82fPPikH03f_Ek" target="_blank">View Certificate Image</a>
-            </div>
-        </div>
-        
-        <!-- Existing certificates... -->
-        
+        <!-- Existing certifications will be inserted here -->
     </div>
 
     <div class="form-container">
@@ -148,37 +139,59 @@
     </div>
 
     <script>
-        document.getElementById('add-certification-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            var title = document.getElementById('cert-title').value;
-            var description = document.getElementById('cert-description').value;
-            var image = document.getElementById('cert-image').files[0];
-            var link = document.getElementById('cert-link').value;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load certifications from local storage
+            const storedCerts = JSON.parse(localStorage.getItem('certifications')) || [];
+            storedCerts.forEach(cert => addCertificationToPage(cert));
 
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                var newCert = document.createElement('div');
-                newCert.classList.add('certification');
-                newCert.innerHTML = `
-                    <h3>${title}</h3>
-                    <p>${description}</p>
-                    <div class="image-link-button">
-                        <a href="${link}" target="_blank">View Certificate Image</a>
-                    </div>
-                `;
+            document.getElementById('add-certification-form').addEventListener('submit', function(event) {
+                event.preventDefault();
 
-                document.getElementById('certifications-list').appendChild(newCert);
+                const title = document.getElementById('cert-title').value;
+                const description = document.getElementById('cert-description').value;
+                const imageFile = document.getElementById('cert-image').files[0];
+                const link = document.getElementById('cert-link').value;
 
-                // Clear form inputs
-                document.getElementById('cert-title').value = '';
-                document.getElementById('cert-description').value = '';
-                document.getElementById('cert-image').value = '';
-                document.getElementById('cert-link').value = '';
-            };
-            
-            reader.readAsDataURL(image);
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const newCert = {
+                        title: title,
+                        description: description,
+                        imageSrc: e.target.result,
+                        link: link
+                    };
+
+                    // Save the new certificate to local storage
+                    storedCerts.push(newCert);
+                    localStorage.setItem('certifications', JSON.stringify(storedCerts));
+
+                    // Add the new certificate to the page
+                    addCertificationToPage(newCert);
+
+                    // Clear form inputs
+                    document.getElementById('cert-title').value = '';
+                    document.getElementById('cert-description').value = '';
+                    document.getElementById('cert-image').value = '';
+                    document.getElementById('cert-link').value = '';
+                };
+
+                reader.readAsDataURL(imageFile);
+            });
         });
+
+        function addCertificationToPage(cert) {
+            const newCert = document.createElement('div');
+            newCert.classList.add('certification');
+            newCert.innerHTML = `
+                <h3>${cert.title}</h3>
+                <p>${cert.description}</p>
+                <div class="image-link-button">
+                    <a href="${cert.link}" target="_blank">View Certificate Image</a>
+                </div>
+            `;
+
+            document.getElementById('certifications-list').appendChild(newCert);
+        }
     </script>
 </body>
 </html>
